@@ -1,7 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogComponent } from './blog/blog.component';
+import { BookComponent } from './book/book.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'blog',
+    pathMatch: 'prefix',
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
+    path: 'book',
+    component: BookComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
