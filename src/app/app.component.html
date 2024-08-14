@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet>
+
+<button [routerLink]="['/book']">Go to Book</button>
+<button [routerLink]="['/blog']">Go to Blog</button>
+<button [routerLink]="['/user']">Go to User</button> -->
+
+<app-blog *ngIf="showBlog"></app-blog>
+<button (click)="toggleShowBlog()">Show/Hide Blog</button>
+
+
